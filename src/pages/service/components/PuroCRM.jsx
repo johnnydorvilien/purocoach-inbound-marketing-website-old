@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import img from "../img/puro-crm.png";
 import { useMediaQuery } from "react-responsive";
 const PuroCRM = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<section className="puro-crm-section">
 			<div className="target-id" id="crm"></div>
@@ -17,7 +17,7 @@ const PuroCRM = () => {
 							</p>
 							<Link
 								className="cmn-btn btn-white"
-								to="/pricing"
+								to="/trial-signup"
 								// style={{ minWidth: "233px" }}
 							>
 								Contact Us Now
