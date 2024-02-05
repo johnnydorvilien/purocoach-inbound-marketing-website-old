@@ -12,7 +12,7 @@ const TrustedCrm = () => {
 	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
 		<>
-			<section className="trusted-crm-section">
+			<section className="trusted-crm-section traffic">
 				<div className="container">
 					<div className="row align-items-center gy-2">
 						<div className="col-lg-6 img">
