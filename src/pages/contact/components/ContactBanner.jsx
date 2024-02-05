@@ -13,7 +13,7 @@ import mobile from "../mobilebgc.png";
 import { useMediaQuery } from "react-responsive";
 
 const ContactBanner = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({  maxWidth: 767 });
 
 	const [phone, setPhone] = useState("");
 	const [name, setName] = useState("");

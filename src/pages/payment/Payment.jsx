@@ -58,7 +58,7 @@ const Payment = () => {
 						<h2 className="title title-xl-title pb-0 text-base">
 							Complete Payment
 						</h2>
-						<br />
+						{/* <br /> */}
 						<p className="txt mx-auto" style={{ maxWidth: "1170px" }}>
 							Lorem ipsum dolor sit amet consectetur. Turpis sit iaculis
 							tristique aliquam eu adipiscing.
@@ -201,7 +201,7 @@ const Payment = () => {
 													/>
 												</div>
 											</div>
-											<hr style={{ marginBlock: "32px" }} />
+											<hr style={{ marginBlock: "20px" }} />
 											<div className="d-flex flex-wrap flex-sm-nowrap align-items-center justify-content-between">
 												<label className="form-check form--radio">
 													<input

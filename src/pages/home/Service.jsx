@@ -18,7 +18,8 @@ const Service = () => {
 	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
 		<section className="service-section position-relative youronestop">
-			{window.innerWidth > 991 && (
+			{window.innerWidth > 768 && <div className="service-section-bg"></div>}
+			{/* {window.innerWidth > 991 && (
 				<div className="service-section-bg max-b-0"></div>
 			)}
 			{window.innerWidth > 991 && (
@@ -27,18 +28,19 @@ const Service = () => {
 					alt=""
 					className="service-bottom-shape d-none d-md-block"
 				/>
-			)}
+			)} */}
 			<div className="container">
 				
 				{/* <br className="d-lg-none" />
 				<br className="d-lg-none" /> */}
-				<div className="yourone" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",padding:"50px 10px 30px"}}>
+				<div className="yourone">
 				
 				<div className="boost-title">
 					<div className="section-title">
 						<h2 className="text-base text-start text-md-center shape-full">
 							Your One Stop Shop for All Your Marketing Business Needs
 						</h2>
+						<span className="shadow-border"></span>
 					</div>
 				</div>
 				<div className="row gy-3 gx-4 service-card-wrapper">
