@@ -12,7 +12,7 @@ const RequestDemo = () => {
 	const [service, setService] = useState("");
 	const [message, setMessage] = useState("");
 	const [phone, setPhone] = useState("");
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	
 
 	const [submit, setSubmit] = useState(false);

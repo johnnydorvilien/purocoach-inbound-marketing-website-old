@@ -8,13 +8,13 @@ import shape from "./img/shape.png";
 import mobile from "./img/mobilepartner.png";
 import { useMediaQuery } from "react-responsive";
 const PartnerWithUs = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth:767 });
 	return (
 		<>
 			<section className="partner-with-us growyour" >
-			{window.innerWidth > 991 && (
+			{/* {window.innerWidth > 991 && (
 				<div className="feature-bg"></div>
-				)}
+				)} */}
 				{/* <img
 					src={shape}
 					className="top-right-shape d-none d-sm-block"
@@ -180,7 +180,7 @@ const PartnerWithUs = () => {
 								data-bs-dismiss="modal"
 							>
 								<HashLink
-									to="/#request-demo"
+									to="/trial-signup"
 									className="cmn-btn btn-white btn-standard flex-grow-1 w-0"
 								>
 									Connect with Us Now

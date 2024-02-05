@@ -5,7 +5,7 @@ import mobile from "./img/mobilejohn.png";
 import bg from "./img/johnnybg.png";
 import { useMediaQuery } from "react-responsive";
 const QuoteSection = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({  maxWidth: 767 });
 	return (
 		<section className="quote-section" >
 			<div className="container">

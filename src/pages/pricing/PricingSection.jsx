@@ -19,23 +19,23 @@ const PricingSection = () => {
 	const [yearly, setYearly] = useState(false);
 	const [featureOpen, setFeatureOpen] = useState(false);
 	const location = useLocation();
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<>
-			<section className="pricing-section pb-0 overflow-hidden offer">
+			<div className="pricing-section pb-0 overflow-hidden offer">
 				<img src={pricingShape} alt="" className="pricing_Shape" />
-				<div className="container">
+				<div className="container price">
 					<div className="pricing-tag">
-						Pricing
-						{/* Packages */}
+						{/* Pricing */}
+						Packages
 						</div>
-					<div className="pricing-spacing">
+					{/* <div className="pricing-spacing">
 						<div className="section-title mb-0">
 							<h2 className="title pb-0 text-base font-xl-57" style={{marginBottom: isMobile ? " " : "10px"}}>
 								We Offer a Variety of Packages
 							</h2>
 							<span className= {isMobile ? "shadow-border my-20px": "" }></span>
-							{window.innerWidth > 479 && (
+							{window.innerWidth 767 && (
 							<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"14px"}}>
 								Eager to meet the needs of any coach we work with, we
 								have various price points available to suit your
@@ -44,16 +44,17 @@ const PricingSection = () => {
 								inquiries as a result of working with us.
 							</p>
 							)}
-							{window.innerWidth < 479 && (
+							{window.innerWidth 767 && (
 									<p className="txt mx-auto" style={{ maxWidth: "1170px" ,fontSize:"13px", textAlign:"center"}}>
 									We’re eager to meet the needs of any coach or consultant we work with. We have various package points available to suit your business needs. You will see a high return on your investment, with an increase in clients and inbound inquiries as a result of working with us.
 								</p>
 							)}
 						</div>
-					</div>
+					</div> */}
 				</div>
-			</section>
+			</div>
 			<section className="cards">
+				
 				{/* <img
 					src={img}
 					alt=""
