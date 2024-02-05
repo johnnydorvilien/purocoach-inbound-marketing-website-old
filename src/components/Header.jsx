@@ -52,7 +52,7 @@ const Header = ({ floating }) => {
 					scroll > 0 ? "bg-active" : ""
 				}`}
 			>
-				<div className="container">
+				<div className="container hedercon">
 					<div className="header-wrapper">
 						<Logo />
 						<div className={`menu-wrapper ${open ? "active" : ""}`}>
@@ -88,7 +88,7 @@ const Header = ({ floating }) => {
 												About
 											</NavLink>
 										</li>
-										<li
+										{/* <li
 											className="position-relative d-lg-none"
 											onClick={() => {
 												setSubmenuOpen(true);
@@ -100,9 +100,9 @@ const Header = ({ floating }) => {
 												<CaretRight />
 											</span>
 											<span className="sub-txt">
-											Products Build to power seamless lending.
+												Products Build to power seamless lending.
 											</span>
-										</li>
+										</li> */}
 										{/* <li
 											className="position-relative d-lg-none"
 											onClick={() => {
@@ -118,26 +118,35 @@ const Header = ({ floating }) => {
 												Products Build to power seamless lending.
 											</span>
 										</li> */}
-										<li className="position-relative d-none d-lg-block">
+										{/* <li className="position-relative d-none d-lg-block">
 											<div className="menu-link">
 												{/* Products & Services{" "} */}
-												Services
+												{/* Services */}
 												{/* <span className="caret">
 													<CaretDown />
 												</span> */}
-											</div>
-											<MegaMenu
+											{/* </div> */}
+											{/* <MegaMenu
 												subServiceIndex={subServiceIndex}
 												setSubServiceIndex={setSubServiceIndex}
 											/>
+										</li> */} 
+										<li>
+											<NavLink
+												className="menu-link"
+												to="/services"
+											>
+												{/* Pricing */}
+												Services
+											</NavLink>
 										</li>
 										<li>
 											<NavLink
 												className="menu-link"
 												to="/pricing?inbound-marketing"
 											>
-												Pricing
-												{/* Packages */}
+												{/* Pricing */}
+												Packages
 											</NavLink>
 										</li>
 										<li>

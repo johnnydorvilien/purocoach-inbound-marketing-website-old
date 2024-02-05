@@ -13,10 +13,13 @@ const AboutUsSection = () => {
 	const shouldRenderButton = (title) => {
 		return title === "Our Mission" || title === "Our Vision";
 	  };
-	  const isMobile = useMediaQuery({ maxWidth: 479 });
+	  const isMobile = useMediaQuery({  maxWidth: 767 });
 	return (
 		<>
 			<section className="about-section" >
+			{window.innerWidth > 991 && (
+			<div className="service-section-bg"></div>
+			)}
 				<div className="container">
 					<div className="d-flex flex-column ">
 						{data?.map((item, i) => (

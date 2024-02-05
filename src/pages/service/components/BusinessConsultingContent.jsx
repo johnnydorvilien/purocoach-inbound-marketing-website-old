@@ -9,7 +9,7 @@ import { useMediaQuery } from "react-responsive";
 
 const BusinessConsultingContent = () => {
 	const ref = useRef();
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<section className="business-consulting-content" style={{marginTop:isMobile ? "-30px" : ""}}>
 			<div className="container">
@@ -48,7 +48,7 @@ const BusinessConsultingContent = () => {
 										</p>
 										<Link
 											className="cmn-btn btn-white btn-standard"
-											to="/sign-up"
+											to="/trial-signup"
 										>
 											Get a Quote
 										</Link>

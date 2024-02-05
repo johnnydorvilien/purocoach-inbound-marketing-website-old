@@ -25,16 +25,16 @@ const Feature = () => {
 
 	const screen = useScreen();
 	const navigate = useNavigate();
-	const isMobile = window.innerWidth <= 479;
+	const isMobile = window.innerWidth <= 767;
 	return (
 		<>
-			<section className="feature-section" style={{background: `url(${window.innerWidth > 479 ? " ": mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",}}>
-			{window.innerWidth > 479 && (
+			<section className="feature-section" >
+			{/* {window.innerWidth > 767 && (
 				<div className="feature-bg"></div>
 				)}
-				{window.innerWidth > 479 && (
+				{window.innerWidth > 767 && (
 				<img src={shape} className="top-right-shape" alt="" />
-			)}
+			)} */}
 				<div className="overflow-hidden">
 					<div className="container">
 						<Title
@@ -53,7 +53,7 @@ const Feature = () => {
 									<div className="slider__col">
 										<div className="slider__thumbs">
 										{isMobile
-          									? slides?.map((slide, index) => (
+  ? slides?.slice(0, 2).map((slide, index) => (
               									<div key={index} className="feature-content-card">
                 									<h3 className="title">{slide?.title}</h3>
                 									<p>{slide?.text}</p>
