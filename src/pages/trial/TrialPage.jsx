@@ -11,19 +11,14 @@ import Logo from "../Logo";
 import FaqsSection from "./FaqsSection";
 import Steps from "./Steps";
 import TrialBanner from "./TrialBanner";
+import Header from '../../components/Header'
 import { coachingIndustry, company, countries } from "./data";
 
 const TrialPage = () => {
 	const [step, setStep] = useState(1);
 	return (
 		<>
-			<header>
-				<div className="container">
-					<div className="header-wrapper">
-						<Logo />
-					</div>
-				</div>
-			</header>
+			<Header />
 			<TrialBanner>
 				{step === 1 && <Step1 step={step} setStep={setStep} />}
 				{step === 2 && <Step2 step={step} setStep={setStep} />}
@@ -31,7 +26,7 @@ const TrialPage = () => {
 				{step === 4 && <Step4 step={step} setStep={setStep} />}
 				{step === 5 && <Step5 step={step} setStep={setStep} />}
 			</TrialBanner>
-			<FaqsSection />
+			{/* <FaqsSection /> */}
 			<Copyright />
 		</>
 	);

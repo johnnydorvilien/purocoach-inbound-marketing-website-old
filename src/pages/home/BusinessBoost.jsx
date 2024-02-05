@@ -12,7 +12,8 @@ import { useMediaQuery } from "react-responsive";
 const BusinessBoost = () => {
 	const [tab, setTab] = useState("Business Consulting");
 	const screen = useScreen();
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
+	
 	return (
 		<>
 			<section className="partner-with-us our-process" >
@@ -43,7 +44,8 @@ const BusinessBoost = () => {
 					It all starts with attracting the right customers, who you then work to convert, close, and delight. Learn how our 4 step process can help connect your business with the right customers at the right time.
 					</p>
 				</div>
-				<ul className="boost-tab-menu" >
+				
+				<ul className={`boost-tab-menu${isMobile ? ' mobile-scroll' : ''}`}>
 					<li>
 						<button
 							className={tab == "Business Consulting" ? "active" : ""}
@@ -81,8 +83,9 @@ const BusinessBoost = () => {
 						</button>
 					</li>
 				</ul>
+				
 				<div className="container con2">
-					{screen < 768 ? (
+					{/* {screen < 768 ? (
 						<>
 							<TabItem title="Business Consulting" openmenu="true" />
 
@@ -92,22 +95,22 @@ const BusinessBoost = () => {
 
 							<TabItem title="Business Strategy" />
 						</>
-					) : (
+					) : ( */}
 						<>
 							{tab == "Business Consulting" && (
 								<TabItem title="Business Consulting" openmenu="true" />
 							)}
 							{tab == "Strategy Planning" && (
-								<TabItem title="Strategy Planning" />
+								<TabItem title="Strategy Planning" openmenu="true" />
 							)}
 							{tab == "Market Analysis" && (
-								<TabItem title="Market Analysis" />
+								<TabItem title="Market Analysis" openmenu="true" />
 							)}
 							{tab == "Business Strategy" && (
-								<TabItem title="Business Strategy" />
+								<TabItem title="Business Strategy" openmenu="true" />
 							)}
 						</>
-					)}
+					{/* )} */}
 				</div>
 			</section>
 		</>
@@ -118,7 +121,7 @@ const TabItem = ({ title, openmenu }) => {
 	return (
 		<>
 			<div className="boost-wrapper">
-				<h4
+				{/* <h4
 					className={`m-title d-flex d-md-none justify-content-between align-items-center text-white mb-3 ${
 						open ? "open" : ""
 					}`}
@@ -128,12 +131,14 @@ const TabItem = ({ title, openmenu }) => {
 					<span style={{ width: "20px" }}>
 						<CaretDown3 color="#fff" />
 					</span>
-				</h4>
+				</h4> */}
 				<div className={`${open ? "" : "d-none d-md-block"}`}>
 					<div className="row g-4">
 						<div className="col-xl-6">
 							<div className="about--company">
-								<img src={consult} className="leftimg" alt="" />
+								<div>
+									<img src={consult} className="leftimg" alt="" />
+								</div>
 								<div className="statement-left">
 									<h5>Requirement Gathering</h5>
 									<p>
@@ -165,7 +170,7 @@ const TabItem = ({ title, openmenu }) => {
 										We're one call away!
 									</h4>
 									<Link
-										to="#"
+										to="/trial-signup"
 										className="cmn-btn"
 										style={{
 											background: "#73B9EF",

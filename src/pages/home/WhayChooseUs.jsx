@@ -3,7 +3,7 @@ import { FaqItems } from "../../components/FaqItems";
 import Title from "../../components/Title";
 import { useMediaQuery } from "react-responsive";
 const WhayChooseUs = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<>
 			<section className="why-choose-us our-client">
@@ -52,7 +52,7 @@ const SkillItem = () => {
 							<span className="skill-total"></span>
 							<span
 								className="skill-progress"
-								style={{ height: item?.progress }}
+								style={{ height: item.progress == "4.8%" ? "98%" : item?.progress }}
 							></span>
 						</div>
 						<div>
@@ -74,7 +74,7 @@ const data2 = [
 	},
 	{
 		title: "Star Rating on Google",
-		progress: "4.8",
+		progress: "4.8%",
 	},
 	{
 		title: "Happy Clents",
