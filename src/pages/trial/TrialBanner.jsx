@@ -5,19 +5,25 @@ const TrialBanner = ({ children }) => {
 	return (
 		<>
 			<section className="trial-banner-section">
-				<div className="left-side">
+				
+{/* 				
 					<div
 						className="shapes-bg"
 						style={{
 							WebkitMask: `url(${img}) no-repeat left bottom / cover`,
 							opacity: "1",
 						}}
-					>
+					> */}
+						{/* <span></span>
 						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div className="container shape-container me-md-0">
+						<span></span> */}
+					{/* </div> */}
+					<div className="container">
+						<div className="d-flex abs">
+
+						
+					<div className="left-side">
+					<div className=" shape-container me-md-0">
 						<h1 className="title">Start your 14 days free trial today</h1>
 						<h5 className="subtitle">
 							No credit card required, no software to install.
@@ -33,11 +39,13 @@ const TrialBanner = ({ children }) => {
 					</div>
 				</div>
 				<div className="right-side">
-					<div className="container shape-container">
+					<div className=" shape-container">
 						<div className="right-form-wrapper">
 							<div className="inner-div">{children}</div>
 						</div>
 					</div>
+				</div>
+				</div>
 				</div>
 			</section>
 		</>

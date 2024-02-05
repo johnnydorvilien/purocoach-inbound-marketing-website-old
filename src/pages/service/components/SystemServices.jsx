@@ -19,14 +19,14 @@ const SystemServices = ({ systemData }) => {
 	useEffect(() => {
 		systemData && setShowData(systemData);
 	}, [systemData]);
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767});
 	return (
 		<>
 			<div className="system-solutions">
 			
 				<div className="container space">
 								<h2
-									className="title "
+									className="title auto"
 									style={{ textAlign:"center",justifyContent:"center",paddingTop:isMobile ? "100px" : "130px",paddingBottom: isMobile ? "25px" : "40px",marginBottom:"0"}}
 								>
 									Automate All Your Marketing Processes
@@ -61,13 +61,13 @@ const SystemServices = ({ systemData }) => {
 									{item?.txt1 && (
                   						<ul>
                     						{item?.txt1.map((itemTxt, k) => (
-                      							<li style={{listStyle:"inside"}} key={k}>{itemTxt}</li>
+                      							<li style={{listStyle:"inside",fontSize:isMobile ? "10px" : " "}} key={k}>{itemTxt}</li>
                     						))}
                   						</ul>
                 					)}
 									{item?.title === "Reporting & KPI Performance" && (
 										<Link
-											to="/sign-up"
+											to="/trial-signup"
 											className="cmn-btn btn-white btn-standard"
 											style={{ minWidth: "175px" }}
 										>
@@ -77,7 +77,7 @@ const SystemServices = ({ systemData }) => {
 								</div>
 							</div>
 							{i != data?.length - 1 || systemData?.length - 1 ? (
-								<WhiteDivider margin="40px" />
+								<WhiteDivider margin="67px" />
 							) : (
 								""
 							)}

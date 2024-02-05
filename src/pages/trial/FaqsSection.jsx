@@ -5,7 +5,11 @@ const FaqsSection = () => {
 	return (
 		<section className="faqs-section">
 			<div className="container">
-				<Title title="Frequently Asked Questions" />
+				<div className="section-title">
+					<h2 className="title">Frequently Asked Questions</h2>
+					<span className="shadow-border"></span>
+				</div>
+				{/* <Title title="Frequently Asked Questions" /> */}
 				<div className="row g-4">
 					<div className="col-md-6">
 						<FaqItems id="faqs-items-2" data={data} />
