@@ -25,7 +25,7 @@ const PlanCard = (props) => {
 					))}
 				</ul>
 				{/* <Link to="/auth/login" className="cmn-btn"> */}
-				<Link to="/contact" className="cmn-btn">
+				<Link to="/trial-signup" className="cmn-btn">
 				Schedule a Call
 				</Link>
 			</div>

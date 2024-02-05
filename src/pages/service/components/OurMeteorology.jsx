@@ -53,7 +53,7 @@ const SkillItem = () => {
 							<span className="skill-total"></span>
 							<span
 								className="skill-progress"
-								style={{ height: item?.progress }}
+								style={{ height: item.progress == "4.8%" ? "98%" :  item?.progress }}
 							></span>
 						</div>
 						<div>{item?.progress}</div>
@@ -72,11 +72,11 @@ const data2 = [
 	},
 	{
 		title: "Star Rating on Google",
-		progress: "4.8",
+		progress: "4.8%",
 	},
 	{
 		title: "Happy Clients",
-		progress: "78+",
+		progress: "78%",
 	},
 ];
 

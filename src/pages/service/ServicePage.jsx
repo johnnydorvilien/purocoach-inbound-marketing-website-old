@@ -25,7 +25,7 @@ const ServicePage = () => {
 			{/* <ShapeViewsTwo> */}
 			<section className="consulting">
 				<PuroCRM />
-				<WhiteDivider />
+				{/* <WhiteDivider /> */}
 				<ServiceFeatures />
 			</section>
 				

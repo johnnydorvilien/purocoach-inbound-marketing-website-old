@@ -16,7 +16,7 @@ import img from "../img/hero-top.png";
 import mobile from "../img/mobilehero.png";
 const ServicePageHeader = ({ title, sectionContent }) => {
 	const location = useLocation();
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	// location?.search;
 	const navigate = useNavigate();
 	return (

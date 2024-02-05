@@ -18,12 +18,12 @@ import { useMediaQuery } from "react-responsive";
 const Banner = () => {
 	const [open, setOpen] = useState(false);
 	const screen = useScreen();
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({  maxWidth: 767 });
 	const istablet = useMediaQuery({ maxWidth: 991 });
 	return (
 		<>
 			<section className="banner-section home" style={{
-						background: `url(${window.innerWidth > 479 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",
+						background: `url(${window.innerWidth > 767 ? bg : mobile}) no-repeat top right / cover`,display:"block",backgroundSize:"100% 100%",
 					
 						}}>
 							
@@ -40,14 +40,14 @@ const Banner = () => {
 										</h2>
 										{/* <div className="txt">{item?.txt}</div> */}
 										<div className="txt" style={{fontSize: isMobile ? "20px " : " ",  textAlign: isMobile ? "center" : "", maxWidth: isMobile ? "74%" : " "}}>
-										{screen > 479 ? "Get  Noticed - Generate Leads - Win Customers" : "Get  Noticed  Generate Leads  Win Customers"}
-											{/* {screen > 479
+										{screen > 767 ? "Get  Noticed - Generate Leads - Win Customers" : "Get  Noticed  Generate Leads  Win Customers"}
+											{/* {screen > 767
 												? item?.txt
 												: item?.txt.replace(/-/g, "")} */}
 										</div>
 										<BtnGrp open={open} setOpen={setOpen} screenWidth={screen}/>
 									</div>
-									{screen >479 && (
+									{screen >767 && (
 										<div className="banner-thumb">
 										<img
 											src={bannerImage}
@@ -66,12 +66,12 @@ const Banner = () => {
 	);
 };
 export const BtnGrp = ({ open, setOpen, screenWidth}) => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<>
 			<div className="btn-grp">
 			<Link className="cmn-btn btn-white" to="/trial-signup" style={{marginTop:isMobile ? "40px" : ""}}>
-          		{screenWidth > 479 ? "Get Started" : "Schedule a Free Consultation"}
+          		{screenWidth > 767 ? "Get Started" : "Schedule a Free Consultation"}
         	</Link>
 
 			</div>

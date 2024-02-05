@@ -4,13 +4,13 @@ import Logo from "../pages/Logo";
 import { CaretDown, Facebook, Linkedin, Twitter } from "./Icon";
 import { useMediaQuery } from "react-responsive";
 const Footer = () => {
-	const isMobile = useMediaQuery({ maxWidth: 479 });
+	const isMobile = useMediaQuery({ maxWidth: 767 });
 	return (
 		<>
-			<footer>
+			<footer className="footermargin">
 				<div className="footer-top">
 				<div className="container">
-						{window.innerWidth > 479 && (
+						{window.innerWidth > 767 && (
           					<div className="shapes-mobile"></div>
         				)}
 						<div className="footer-top-widget">
@@ -18,11 +18,11 @@ const Footer = () => {
 								{/* <div className="mb-3">
 									<Logo />
 								</div> */}
-								{window.innerWidth > 991 && (
+								{/* {window.innerWidth > 991 && (
           							<div className="mb-3">
             							<Logo />
           							</div>
-        						)}
+        						)} */}
 								<h3 className="title d-md">
 									Sign Up For Our Newsletter
 								</h3>
@@ -33,9 +33,9 @@ const Footer = () => {
 											placeholder="Email"
 											className="form-control form--control"
 										/>
-										<button className="cmn-btn input-btn-text">
+										<Link className="cmn-btn input-btn-text" to="/trial-signup" >
 											Subscribe
-										</button>
+										</Link>
 									</div>
 								</form>
 								<p>
@@ -52,7 +52,7 @@ const Footer = () => {
 				</div>
 				<div className="footer-bottom">
 					<div className="container">
-						<div style={{fontWeight:"400",display:isMobile ? "block" : "flex",justifyContent:"space-between",alignItems:"center",}}>
+						<div style={{fontWeight:"normal",display:isMobile ? "block" : "flex",justifyContent:"space-between",alignItems:"center",}}>
 							<div className="widget-left">
 								
 								<ul className="social-icons justify-content-start" >
